@@ -18,7 +18,7 @@ export default function TabPill() {
     </View>
   );
 }
-
+// The TabPill component is a functional component that renders a tab navigation bar with three tabs: "Chat", "Status", and "Calls". The "Chat" tab is styled as the active tab, while the other two tabs are styled as neutral. The component uses TouchableOpacity to make the tabs clickable, and the styles are defined using StyleSheet to create a visually appealing tab navigation layout with appropriate spacing, colors, and shadows.
 const styles = StyleSheet.create({
   wrapper: {
     flexDirection: "row",
