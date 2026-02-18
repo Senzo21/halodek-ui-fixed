@@ -99,3 +99,4 @@ const styles = StyleSheet.create({
     fontSize: 12
   }
 });
+// The ChatItem component is a functional component that represents an individual chat item in the chat list. It takes in props such as name, message, time, unread count, typing status, and avatar. The component uses TouchableOpacity to make the entire row clickable, and it displays the avatar, name, message, time, and unread badge if there are unread messages. The styles are defined using StyleSheet to create a visually appealing layout for the chat item.
