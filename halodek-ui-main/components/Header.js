@@ -17,7 +17,7 @@ export default function Header({ title = "HALODEK" }) {
     </View>
   );
 }
-
+// The Header component is a functional component that renders the header section of the app. It displays the title "HALODEK" on the left side and includes two icon buttons on the right side for search and more options. The styles are defined using StyleSheet to create a visually appealing header layout with appropriate spacing and alignment.
 const styles = StyleSheet.create({
   header: {
     paddingHorizontal: 18,
