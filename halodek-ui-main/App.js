@@ -16,7 +16,7 @@ const CHAT_DATA = [
   { id: "7", name: "Abdull", message: "Perfecto!🔥 I will check it later", time: "28/08/22", unread: 0, avatar: { uri: "https://i.pravatar.cc/150?img=32" } },
   { id: "8", name: "Ibe hatypo", message: "nicely done bro!👍🏼", time: "—", unread: 0, avatar: { uri: "https://i.pravatar.cc/150?img=3" } }
 ];
-
+// The App component is the main functional component of the application. It uses a SafeAreaView to ensure that content is displayed within the safe area boundaries of a device. The StatusBar is configured to have a dark content style and a transparent background. The Header component displays the title "HALODEK", while the TabPill component provides tab navigation. The FlatList component renders the list of chat items using the ChatItem component, and a FloatingButton is included for creating new chats.
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
