@@ -32,3 +32,4 @@ const styles = StyleSheet.create({
     shadowRadius: 12
   }
 });
+// The FloatingButton component is a functional component that renders a circular button with a plus icon. It is positioned absolutely at the bottom right corner of the screen. The button has a red background color and a shadow effect to make it stand out. When the button is pressed, it triggers the onPress function passed as a prop, which can be used to handle actions such as creating a new chat or opening a new screen.
