@@ -54,3 +54,4 @@ const styles = StyleSheet.create({
     paddingBottom: 36
   }
 });
+// This file is the main entry point of the application. It sets up the overall structure and layout of the app, including the header, tab navigation, chat list, and floating action button. The chat data is hardcoded for demonstration purposes, and the app uses remote avatar images to avoid the need for local assets.
