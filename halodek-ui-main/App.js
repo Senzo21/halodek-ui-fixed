@@ -38,7 +38,7 @@ export default function App() {
     </SafeAreaView>
   );
 }
-
+// The styles for the app are defined using StyleSheet. The container style sets up the main layout and background color, while the tabContainer and listContent styles provide padding and spacing for the tab navigation and chat list respectively.
 const styles = StyleSheet.create({
   container: {
     flex: 1,
