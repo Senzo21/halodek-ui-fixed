@@ -1,8 +1,17 @@
 import React from "react";
-import { View, TouchableOpacity, StyleSheet } from "react-native";
 import { Entypo } from "@expo/vector-icons";
+import {
+  GestureResponderEvent,
+  StyleSheet,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
-export default function FloatingButton({ onPress }) {
+type FloatingButtonProps = {
+  onPress: (event: GestureResponderEvent) => void;
+};
+
+export default function FloatingButton({ onPress }: FloatingButtonProps): JSX.Element {
   return (
     <View style={styles.container} pointerEvents="box-none">
       <TouchableOpacity style={styles.button} onPress={onPress}>
@@ -16,7 +25,7 @@ const styles = StyleSheet.create({
   container: {
     position: "absolute",
     right: 18,
-    bottom: 28
+    bottom: 28,
   },
   button: {
     backgroundColor: "#FF6B35",
@@ -29,6 +38,6 @@ const styles = StyleSheet.create({
     shadowColor: "#FF6B35",
     shadowOpacity: 0.3,
     shadowOffset: { width: 0, height: 10 },
-    shadowRadius: 12
-  }
+    shadowRadius: 12,
+  },
 });

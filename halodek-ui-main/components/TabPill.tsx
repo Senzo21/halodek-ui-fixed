@@ -1,7 +1,7 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-export default function TabPill() {
+export default function TabPill(): JSX.Element {
   return (
     <View style={styles.wrapper}>
       <TouchableOpacity style={[styles.tab, styles.activeTab]}>
@@ -52,10 +52,10 @@ const styles = StyleSheet.create({
   },
   tabText: {
     fontSize: 14,
-    color: "#8A5B52"
+    color: "#8A5B52",
   },
   activeText: {
     color: "#fff",
-    fontWeight: "700"
-  }
+    fontWeight: "700",
+  },
 });

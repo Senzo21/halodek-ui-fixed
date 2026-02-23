@@ -1,8 +1,12 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import { MaterialIcons, Entypo } from "@expo/vector-icons";
+import { Entypo, MaterialIcons } from "@expo/vector-icons";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-export default function Header({ title = "HALODEK" }) {
+type HeaderProps = {
+  title?: string;
+};
+
+export default function Header({ title = "HALODEK" }: HeaderProps): JSX.Element {
   return (
     <View style={styles.header}>
       <Text style={styles.title}>{title}</Text>
@@ -35,11 +39,11 @@ const styles = StyleSheet.create({
   },
   right: {
     flexDirection: "row",
-    alignItems: "center"
+    alignItems: "center",
   },
   iconBtn: {
     marginLeft: 12,
     padding: 6,
     borderRadius: 10,
-  }
+  },
 });

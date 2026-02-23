@@ -1,5 +1,21 @@
 import React from "react";
-import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
+import {
+  type ImageSourcePropType,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
+
+export type ChatItemProps = {
+  name: string;
+  message: string;
+  time: string;
+  unread?: number;
+  typing?: boolean;
+  avatar: ImageSourcePropType;
+};
 
 export default function ChatItem({
   name,
@@ -7,15 +23,17 @@ export default function ChatItem({
   time,
   unread = 0,
   typing = false,
-  avatar
-}) {
+  avatar,
+}: ChatItemProps): JSX.Element {
   return (
     <TouchableOpacity activeOpacity={0.8} style={styles.row}>
       <Image source={avatar} style={styles.avatar} />
 
       <View style={styles.center}>
         <View style={styles.topLine}>
-          <Text numberOfLines={1} style={styles.name}>{name}</Text>
+          <Text numberOfLines={1} style={styles.name}>
+            {name}
+          </Text>
           <Text style={styles.time}>{time}</Text>
         </View>
 
@@ -48,40 +66,40 @@ const styles = StyleSheet.create({
     height: 54,
     borderRadius: 28,
     marginRight: 12,
-    backgroundColor: "#eee"
+    backgroundColor: "#eee",
   },
   center: {
     flex: 1,
-    justifyContent: "center"
+    justifyContent: "center",
   },
   topLine: {
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "center"
+    alignItems: "center",
   },
   name: {
     fontWeight: "700",
     fontSize: 16,
     color: "#222",
-    maxWidth: "70%"
+    maxWidth: "70%",
   },
   time: {
     fontSize: 12,
-    color: "#9D9D9D"
+    color: "#9D9D9D",
   },
   bottomLine: {
     flexDirection: "row",
     alignItems: "center",
-    marginTop: 6
+    marginTop: 6,
   },
   message: {
     color: "#6B6B6B",
     flex: 1,
-    fontSize: 13
+    fontSize: 13,
   },
   typing: {
     color: "#E85716",
-    fontWeight: "600"
+    fontWeight: "600",
   },
   badge: {
     backgroundColor: "#FF6B35",
@@ -91,11 +109,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginLeft: 10,
-    paddingHorizontal: 6
+    paddingHorizontal: 6,
   },
   badgeText: {
     color: "#fff",
     fontWeight: "700",
-    fontSize: 12
-  }
+    fontSize: 12,
+  },
 });
