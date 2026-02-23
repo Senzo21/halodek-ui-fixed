@@ -1,7 +1,7 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-export default function TabPill() {
+export default function TabPill(): JSX.Element {
   return (
     <View style={styles.wrapper}>
       <TouchableOpacity style={[styles.tab, styles.activeTab]}>
@@ -18,7 +18,7 @@ export default function TabPill() {
     </View>
   );
 }
-// The TabPill component is a functional component that renders a tab navigation bar with three tabs: "Chat", "Status", and "Calls". The "Chat" tab is styled as the active tab, while the other two tabs are styled as neutral. The component uses TouchableOpacity to make the tabs clickable, and the styles are defined using StyleSheet to create a visually appealing tab navigation layout with appropriate spacing, colors, and shadows.
+
 const styles = StyleSheet.create({
   wrapper: {
     flexDirection: "row",
@@ -52,10 +52,10 @@ const styles = StyleSheet.create({
   },
   tabText: {
     fontSize: 14,
-    color: "#8A5B52"
+    color: "#8A5B52",
   },
   activeText: {
     color: "#fff",
-    fontWeight: "700"
-  }
+    fontWeight: "700",
+  },
 });
