@@ -1,8 +1,12 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import { MaterialIcons, Entypo } from "@expo/vector-icons";
+import { Entypo, MaterialIcons } from "@expo/vector-icons";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-export default function Header({ title = "HALODEK" }) {
+type HeaderProps = {
+  title?: string;
+};
+
+export default function Header({ title = "HALODEK" }: HeaderProps): JSX.Element {
   return (
     <View style={styles.header}>
       <Text style={styles.title}>{title}</Text>
@@ -17,7 +21,7 @@ export default function Header({ title = "HALODEK" }) {
     </View>
   );
 }
-// The Header component is a functional component that renders the header section of the app. It displays the title "HALODEK" on the left side and includes two icon buttons on the right side for search and more options. The styles are defined using StyleSheet to create a visually appealing header layout with appropriate spacing and alignment.
+
 const styles = StyleSheet.create({
   header: {
     paddingHorizontal: 18,
@@ -35,11 +39,11 @@ const styles = StyleSheet.create({
   },
   right: {
     flexDirection: "row",
-    alignItems: "center"
+    alignItems: "center",
   },
   iconBtn: {
     marginLeft: 12,
     padding: 6,
     borderRadius: 10,
-  }
+  },
 });
